@@ -2,10 +2,9 @@
 
 namespace Hopkins\Generators\Generators;
 
-use Hopkins\Generators\Generators\Cache;
+use Hopkins\Generators\Cache;
 use Illuminate\Console\AppNamespaceDetectorTrait;
 use Illuminate\Filesystem\Filesystem as File;
-use PhpParser\Node\Name;
 
 class RequestedCacheNotFound extends \Exception {}
 
