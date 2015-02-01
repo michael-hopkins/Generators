@@ -1,4 +1,4 @@
-<?php namespace Hopkins\Generators\Generators;
+<?php namespace Hopkins\Generators;
 
 use Illuminate\Filesystem\Filesystem as File;
 
