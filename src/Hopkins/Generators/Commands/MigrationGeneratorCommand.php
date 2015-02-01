@@ -1,7 +1,7 @@
 <?php namespace Hopkins\Generators\Commands;
 
 use Config;
-use Hopkins\Generators\Generators\Generators\MigrationGenerator;
+use Hopkins\Generators\Generators\MigrationGenerator;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -25,7 +25,7 @@ class MigrationGeneratorCommand extends BaseGeneratorCommand
     /**
      * Model generator instance.
      *
-     * @var \Hopkins\Generators\Generators\Generators\MigrationGenerator
+     * @var \Hopkins\Generators\Generators\MigrationGenerator
      */
     protected $generator;
 

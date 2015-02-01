@@ -1,7 +1,7 @@
 <?php namespace Hopkins\Generators\Commands;
 
 use Config;
-use Hopkins\Generators\Generators\Generators\ResourceGenerator;
+use Hopkins\Generators\Generators\ResourceGenerator;
 use Hopkins\Generators\Generators\Cache;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
@@ -29,7 +29,7 @@ class ResourceGeneratorCommand extends Command {
     /**
      * Model generator instance.
      *
-     * @var \Hopkins\Generators\Generators\Generators\ResourceGenerator
+     * @var \Hopkins\Generators\Generators\ResourceGenerator
      */
     protected $generator;
 

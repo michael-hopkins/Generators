@@ -1,6 +1,6 @@
 <?php namespace Hopkins\Generators\Commands;
 
-use Hopkins\Generators\Generators\Generators\FormDumperGenerator;
+use Hopkins\Generators\Generators\FormDumperGenerator;
 use Illuminate\Console\Command;
 use Mustache_Engine as Mustache;
 use Illuminate\Support\Pluralizer;
@@ -27,7 +27,7 @@ class FormDumperCommand extends BaseGeneratorCommand {
     /**
      * FormDumper generator instance.
      *
-     * @var \Hopkins\Generators\Generators\Generators\FormDumperGenerator
+     * @var \Hopkins\Generators\Generators\FormDumperGenerator
      */
     protected $generator;
 

@@ -1,7 +1,7 @@
 <?php namespace Hopkins\Generators\Commands;
 
 use Config;
-use Hopkins\Generators\Generators\Generators\ControllerGenerator;
+use Hopkins\Generators\Generators\ControllerGenerator;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -25,7 +25,7 @@ class ControllerGeneratorCommand extends BaseGeneratorCommand {
     /**
      * Model generator instance.
      *
-     * @var \Hopkins\Generators\Generators\Generators\ControllerGenerator
+     * @var \Hopkins\Generators\Generators\ControllerGenerator
      */
     protected $generator;
 

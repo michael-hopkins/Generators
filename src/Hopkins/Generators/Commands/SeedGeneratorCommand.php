@@ -1,7 +1,7 @@
 <?php namespace Hopkins\Generators\Commands;
 
 use Config;
-use Hopkins\Generators\Generators\Generators\SeedGenerator;
+use Hopkins\Generators\Generators\SeedGenerator;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -25,7 +25,7 @@ class SeedGeneratorCommand extends BaseGeneratorCommand {
     /**
      * Model generator instance.
      *
-     * @var \Hopkins\Generators\Generators\Generators\SeedGenerator
+     * @var \Hopkins\Generators\Generators\SeedGenerator
      */
     protected $generator;
 

@@ -1,6 +1,6 @@
 <?php namespace Hopkins\Generators\Commands;
 
-use Hopkins\Generators\Generators\Generators\ResourceGenerator;
+use Hopkins\Generators\Generators\ResourceGenerator;
 use Hopkins\Generators\Generators\Cache;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;

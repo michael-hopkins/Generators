@@ -1,6 +1,6 @@
 <?php namespace Hopkins\Generators\Commands;
 
-use Hopkins\Generators\Generators\Generators\TestGenerator;
+use Hopkins\Generators\Generators\TestGenerator;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -24,7 +24,7 @@ class TestGeneratorCommand extends BaseGeneratorCommand {
     /**
      * Test generator instance.
      *
-     * @var \Hopkins\Generators\Generators\Generators\TestGenerator
+     * @var \Hopkins\Generators\Generators\TestGenerator
      */
     protected $generator;
 
