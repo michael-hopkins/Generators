@@ -1,6 +1,5 @@
 <?php namespace Hopkins\Generators;
 
-use Hopkins\Generators\Cache;
 use Hopkins\Generators\Commands\ControllerGeneratorCommand;
 use Hopkins\Generators\Commands\FormDumperCommand;
 use Hopkins\Generators\Commands\MigrationGeneratorCommand;
