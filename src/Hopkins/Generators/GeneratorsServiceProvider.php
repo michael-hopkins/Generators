@@ -1,9 +1,25 @@
 <?php namespace Hopkins\Generators;
 
 use Hopkins\Generators\Generators\Cache;
+use Hopkins\Generators\Generators\Commands\ControllerGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\FormDumperCommand;
+use Hopkins\Generators\Generators\Commands\MigrationGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\ModelGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\PivotGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\ResourceGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\ScaffoldGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\SeedGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\TestGeneratorCommand;
+use Hopkins\Generators\Generators\Commands\ViewGeneratorCommand;
+use Hopkins\Generators\Generators\Generators\ControllerGenerator;
+use Hopkins\Generators\Generators\Generators\FormDumperGenerator;
+use Hopkins\Generators\Generators\Generators\MigrationGenerator;
+use Hopkins\Generators\Generators\Generators\ModelGenerator;
+use Hopkins\Generators\Generators\Generators\ResourceGenerator;
+use Hopkins\Generators\Generators\Generators\SeedGenerator;
+use Hopkins\Generators\Generators\Generators\TestGenerator;
+use Hopkins\Generators\Generators\Generators\ViewGenerator;
 use Mustache_Engine;
-use Hopkins\Generators\Generators\Commands;
-use Hopkins\Generators\Generators\Generators;
 use Illuminate\Support\ServiceProvider;
 
 class GeneratorsServiceProvider extends ServiceProvider {
@@ -50,156 +66,156 @@ class GeneratorsServiceProvider extends ServiceProvider {
 	/**
 	 * Register generate:model
 	 *
-	 * @return Commands\ModelGeneratorCommand
+	 * @return ModelGeneratorCommand
 	 */
 	protected function registerModelGenerator()
 	{
 		$this->app['generate.model'] = $this->app->share(function($app)
 		{
 			$cache = new Cache($app['files']);
-			$generator = new Generators\ModelGenerator($app['files'], $cache);
+			$generator = new ModelGenerator($app['files'], $cache);
 
-			return new Commands\ModelGeneratorCommand($generator);
+			return new ModelGeneratorCommand($generator);
 		});
 	}
 
 	/**
 	 * Register generate:controller
 	 *
-	 * @return Commands\ControllerGeneratorCommand
+	 * @return ControllerGeneratorCommand
 	 */
 	protected function registerControllerGenerator()
 	{
 		$this->app['generate.controller'] = $this->app->share(function($app)
 		{
 			$cache = new Cache($app['files']);
-			$generator = new Generators\ControllerGenerator($app['files'], $cache);
+			$generator = new ControllerGenerator($app['files'], $cache);
 
-			return new Commands\ControllerGeneratorCommand($generator);
+			return new ControllerGeneratorCommand($generator);
 		});
 	}
 
 	/**
 	 * Register generate:test
 	 *
-	 * @return Commands\TestGeneratorCommand
+	 * @return TestGeneratorCommand
 	 */
 	protected function registerTestGenerator()
 	{
 		$this->app['generate.test'] = $this->app->share(function($app)
 		{
 			$cache = new Cache($app['files']);
-			$generator = new Generators\TestGenerator($app['files'], $cache);
+			$generator = new TestGenerator($app['files'], $cache);
 
-			return new Commands\TestGeneratorCommand($generator);
+			return new TestGeneratorCommand($generator);
 		});
 	}
 
 	/**
 	 * Register generate:view
 	 *
-	 * @return Commands\ViewGeneratorCommand
+	 * @return ViewGeneratorCommand
 	 */
 	protected function registerViewGenerator()
 	{
 		$this->app['generate.view'] = $this->app->share(function($app)
 		{
 			$cache = new Cache($app['files']);
-			$generator = new Generators\ViewGenerator($app['files'], $cache);
+			$generator = new ViewGenerator($app['files'], $cache);
 
-			return new Commands\ViewGeneratorCommand($generator);
+			return new ViewGeneratorCommand($generator);
 		});
 	}
 
 	/**
 	 * Register generate:scaffold
 	 *
-	 * @return Commands\ScaffoldGeneratorCommand
+	 * @return ScaffoldGeneratorCommand
 	 */
 	protected function registerScaffoldGenerator()
 	{
 		$this->app['generate.scaffold'] = $this->app->share(function($app)
 		{
-			$generator = new Generators\ResourceGenerator($app['files']);
+			$generator = new ResourceGenerator($app['files']);
 			$cache = new Cache($app['files']);
 
-			return new Commands\ScaffoldGeneratorCommand($generator, $cache);
+			return new ScaffoldGeneratorCommand($generator, $cache);
 		});
 	}
 
 	/**
 	 * Register generate:scaffold
 	 *
-	 * @return Commands\ScaffoldGeneratorCommand
+	 * @return ScaffoldGeneratorCommand
 	 */
 	protected function registerResourceGenerator()
 	{
 		$this->app['generate.resource'] = $this->app->share(function($app)
 		{
 			$cache = new Cache($app['files']);
-			$generator = new Generators\ResourceGenerator($app['files'], $cache);
+			$generator = new ResourceGenerator($app['files'], $cache);
 
-			return new Commands\ResourceGeneratorCommand($generator, $cache);
+			return new ResourceGeneratorCommand($generator, $cache);
 		});
 	}
 
 	/**
 	 * Register generate:migration
 	 *
-	 * @return Commands\MigrationGeneratorCommand
+	 * @return MigrationGeneratorCommand
 	 */
 	protected function registerMigrationGenerator()
 	{
 		$this->app['generate.migration'] = $this->app->share(function($app)
 		{
 			$cache = new Cache($app['files']);
-			$generator = new Generators\MigrationGenerator($app['files'], $cache);
+			$generator = new MigrationGenerator($app['files'], $cache);
 
-			return new Commands\MigrationGeneratorCommand($generator);
+			return new MigrationGeneratorCommand($generator);
 		});
 	}
 
 	/**
 	 * Register generate:pivot
 	 *
-	 * @return Commands\PivotGeneratorCommand
+	 * @return PivotGeneratorCommand
 	 */
 	protected function registerPivotGenerator()
 	{
 		$this->app['generate.pivot'] = $this->app->share(function($app)
 		{
-			return new Commands\PivotGeneratorCommand;
+			return new PivotGeneratorCommand;
 		});
 	}
 
 	/**
 	 * Register generate:seed
 	 *
-	 * @return Commands\MigrationGeneratorCommand
+	 * @return MigrationGeneratorCommand
 	 */
 	protected function registerSeedGenerator()
 	{
 		$this->app['generate.seed'] = $this->app->share(function($app)
 		{
 			$cache = new Cache($app['files']);
-			$generator = new Generators\SeedGenerator($app['files'], $cache);
+			$generator = new SeedGenerator($app['files'], $cache);
 
-			return new Commands\SeedGeneratorCommand($generator);
+			return new SeedGeneratorCommand($generator);
 		});
 	}
 
 	/**
 	 * Register generate:migration
 	 *
-	 * @return Commands\MigrationGeneratorCommand
+	 * @return MigrationGeneratorCommand
 	 */
 	protected function registerFormDumper()
 	{
 		$this->app['generate.form'] = $this->app->share(function($app)
 		{
-			$gen = new Generators\FormDumperGenerator($app['files'], new Mustache_Engine);
+			$gen = new FormDumperGenerator($app['files'], new Mustache_Engine);
 
-			return new Commands\FormDumperCommand($gen);
+			return new FormDumperCommand($gen);
 		});
 	}
 
