@@ -2,7 +2,7 @@
 
 use Config;
 use Hopkins\Generators\Generators\ViewGenerator;
-use Illuminate\Console\Command;
+
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -32,7 +32,7 @@ class ViewGeneratorCommand extends BaseGeneratorCommand {
     /**
      * Create a new command instance.
      *
-     * @return void
+     * @param ViewGenerator $generator
      */
     public function __construct(ViewGenerator $generator)
     {

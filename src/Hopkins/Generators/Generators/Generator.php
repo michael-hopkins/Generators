@@ -33,7 +33,8 @@ abstract class Generator {
     /**
      * Constructor
      *
-     * @param $file
+     * @param File $file
+     * @param Cache $cache
      */
     public function __construct(File $file, Cache $cache)
     {

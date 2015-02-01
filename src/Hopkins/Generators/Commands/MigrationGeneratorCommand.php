@@ -2,7 +2,7 @@
 
 use Config;
 use Hopkins\Generators\Generators\MigrationGenerator;
-use Illuminate\Console\Command;
+
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -32,7 +32,7 @@ class MigrationGeneratorCommand extends BaseGeneratorCommand
     /**
      * Create a new command instance.
      *
-     * @return void
+     * @param MigrationGenerator $generator
      */
     public function __construct(MigrationGenerator $generator)
     {

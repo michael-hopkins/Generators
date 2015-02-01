@@ -1,12 +1,5 @@
 <?php namespace Hopkins\Generators\Commands;
 
-use Hopkins\Generators\Generators\ResourceGenerator;
-use Hopkins\Generators\Generators\Cache;
-use Illuminate\Console\Command;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Input\InputArgument;
-use Illuminate\Support\Pluralizer;
-
 class MissingTableFieldsException extends \Exception {}
 
 class ScaffoldGeneratorCommand extends ResourceGeneratorCommand {
@@ -59,6 +52,7 @@ class ScaffoldGeneratorCommand extends ResourceGeneratorCommand {
     /**
      * Get the path to the template for a view.
      *
+     * @param string $view
      * @return string
      */
     protected function getViewTemplatePath($view = 'view')

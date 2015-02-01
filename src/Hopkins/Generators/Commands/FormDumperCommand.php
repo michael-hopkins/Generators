@@ -1,10 +1,8 @@
 <?php namespace Hopkins\Generators\Commands;
 
 use Hopkins\Generators\Generators\FormDumperGenerator;
-use Illuminate\Console\Command;
-use Mustache_Engine as Mustache;
-use Illuminate\Support\Pluralizer;
-use Illuminate\Filesystem\Filesystem as File;
+
+
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -34,7 +32,7 @@ class FormDumperCommand extends BaseGeneratorCommand {
     /**
      * Create a new command instance.
      *
-     * @return void
+     * @param FormDumperGenerator $generator
      */
     public function __construct(FormDumperGenerator $generator)
     {

@@ -2,7 +2,7 @@
 
 use Config;
 use Hopkins\Generators\Generators\ResourceGenerator;
-use Hopkins\Generators\Generators\Cache;
+use Hopkins\Generators\Cache;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -43,7 +43,8 @@ class ResourceGeneratorCommand extends Command {
     /**
      * Create a new command instance.
      *
-     * @return void
+     * @param ResourceGenerator $generator
+     * @param Cache $cache
      */
     public function __construct(ResourceGenerator $generator, Cache $cache)
     {
@@ -56,7 +57,7 @@ class ResourceGeneratorCommand extends Command {
     /**
      * Execute the console command.
      *
-     * @return void
+     * @throws MissingFieldsException
      */
     public function fire()
     {
@@ -118,10 +119,10 @@ class ResourceGeneratorCommand extends Command {
 
     /**
      * Get the path to the template for a view.
-     *
      * @return string
+     * @internal param string $view
      */
-    protected function getViewTemplatePath($view = 'view')
+    protected function getViewTemplatePath()
     {
         return __DIR__."/../Generators/templates/view.txt";
     }

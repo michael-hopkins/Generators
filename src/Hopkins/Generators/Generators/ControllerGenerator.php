@@ -2,7 +2,7 @@
 
 namespace Hopkins\Generators\Generators;
 
-use Illuminate\Filesystem\Filesystem as File;
+
 use Illuminate\Support\Pluralizer;
 
 class ControllerGenerator extends Generator {

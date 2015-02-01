@@ -1,7 +1,7 @@
 <?php namespace Hopkins\Generators\Commands;
 
 use Hopkins\Generators\Generators\TestGenerator;
-use Illuminate\Console\Command;
+
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
@@ -31,7 +31,7 @@ class TestGeneratorCommand extends BaseGeneratorCommand {
     /**
      * Create a new command instance.
      *
-     * @return void
+     * @param TestGenerator $generator
      */
     public function __construct(TestGenerator $generator)
     {
