@@ -1,6 +1,6 @@
 <?php
 
-namespace Hopkins\Generators\Generators\Generators;
+namespace Hopkins\Generators\Generators;
 
 use Illuminate\Support\Pluralizer;
 

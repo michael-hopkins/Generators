@@ -1,4 +1,4 @@
-<?php namespace Hopkins\Generators\Generators\Commands;
+<?php namespace Hopkins\Generators\Commands;
 
 use Illuminate\Console\Command;
 

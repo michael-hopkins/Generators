@@ -1,6 +1,6 @@
 <?php
 
-namespace Hopkins\Generators\Generators\Generators;
+namespace Hopkins\Generators\Generators;
 
 use Illuminate\Filesystem\Filesystem as File;
 use Illuminate\Support\Pluralizer;

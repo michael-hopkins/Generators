@@ -1,6 +1,6 @@
 <?php
 
-namespace Hopkins\Generators\Generators\Generators;
+namespace Hopkins\Generators\Generators;
 
 use Config;
 use Illuminate\Filesystem\Filesystem as File;

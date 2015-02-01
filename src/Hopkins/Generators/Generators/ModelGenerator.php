@@ -1,4 +1,4 @@
-<?php namespace Hopkins\Generators\Generators\Generators;
+<?php namespace Hopkins\Generators\Generators;
 
 use Illuminate\Support\Pluralizer;
 use Illuminate\Support\Str;

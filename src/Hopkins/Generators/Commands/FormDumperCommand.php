@@ -1,4 +1,4 @@
-<?php namespace Hopkins\Generators\Generators\Commands;
+<?php namespace Hopkins\Generators\Commands;
 
 use Hopkins\Generators\Generators\Generators\FormDumperGenerator;
 use Illuminate\Console\Command;

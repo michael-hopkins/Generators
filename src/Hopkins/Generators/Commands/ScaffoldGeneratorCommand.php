@@ -1,4 +1,4 @@
-<?php namespace Hopkins\Generators\Generators\Commands;
+<?php namespace Hopkins\Generators\Commands;
 
 use Hopkins\Generators\Generators\Generators\ResourceGenerator;
 use Hopkins\Generators\Generators\Cache;

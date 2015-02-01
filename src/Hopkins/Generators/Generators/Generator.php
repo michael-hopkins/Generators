@@ -1,6 +1,6 @@
 <?php
 
-namespace Hopkins\Generators\Generators\Generators;
+namespace Hopkins\Generators\Generators;
 
 use Hopkins\Generators\Generators\Cache;
 use Illuminate\Console\AppNamespaceDetectorTrait;
