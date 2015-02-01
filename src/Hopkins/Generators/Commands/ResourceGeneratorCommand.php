@@ -84,7 +84,7 @@ class ResourceGeneratorCommand extends Command {
         $this->generateMigration();
         $this->generateSeed();
 
-        if (get_called_class() === 'Genair\\Generators\\Commands\\ScaffoldGeneratorCommand')
+        if (get_called_class() === 'Hopkins\\Generators\\Commands\\ScaffoldGeneratorCommand')
         {
             $this->generateTest();
         }
@@ -201,7 +201,7 @@ class ResourceGeneratorCommand extends Command {
         );
 
         // If generating a scaffold, we also need views/layouts/scaffold
-        if (get_called_class() === 'Genair\\Generators\\Commands\\ScaffoldGeneratorCommand')
+        if (get_called_class() === 'Hopkins\\Generators\\Commands\\ScaffoldGeneratorCommand')
         {
             $views[] = 'scaffold';
             $this->generator->folders($layouts);
