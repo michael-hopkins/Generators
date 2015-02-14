@@ -1,48 +1,55 @@
 {
-    "name": "hopkins/generators",
-    "description": "Way Generators + Dollars Bootstrap + Watsons Validation",
-    "keywords": ["laravel", "generators", "artisan", "bootstrap", "scaffold"],
-    "authors": [
-        {
-            "name": "Jeffrey Way",
-            "email": "jeffrey@jeffrey-way.com",
-            "role": "Developer"
-        },
-        {
-            "name": "Wes Dollar",
-            "email": "github@wesdollar.com",
-            "role": "Contributor"
-        },
-        {
-            "name": "Michael Hopkins",
-            "email": "mhopkins321@gmail.com",
-            "role": "Contributor"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
-        "mustache/mustache": "2.4.*",
-        "watson/bootstrap-form": "dev-master",
-        "watson/validating": "dev-master"
+  "name": "hopkins/generators",
+  "description": "Way Generators + Dollars Bootstrap + Watsons Validation",
+  "keywords": [
+    "laravel",
+    "generators",
+    "artisan",
+    "bootstrap",
+    "scaffold"
+  ],
+  "authors": [
+    {
+      "name": "Jeffrey Way",
+      "email": "jeffrey@jeffrey-way.com",
+      "role": "Developer"
     },
-    "require-dev": {
-        "mockery/mockery": "0.8.*",
-        "illuminate/support": "5.*",
-        "illuminate/console": "5.*",
-        "illuminate/filesystem": "5.*"
+    {
+      "name": "Wes Dollar",
+      "email": "github@wesdollar.com",
+      "role": "Contributor"
     },
-    "autoload": {
-        "psr-0": {
-            "Hopkins\\Generators": "src/"
-        },
-        "classmap": [
-            "src/Hopkins/Generators/Generators"
-        ]
+    {
+      "name": "Michael Hopkins",
+      "email": "mhopkins321@gmail.com",
+      "role": "Contributor"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "mustache/mustache": "2.4.*",
+    "watson/bootstrap-form": "0.9.*",
+    "watson/validating": "dev-master"
+  },
+  "require-dev": {
+    "mockery/mockery": "0.8.*",
+    "illuminate/support": "5.*",
+    "illuminate/console": "5.*",
+    "illuminate/filesystem": "5.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Hopkins\\Generators": "src/"
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    },
-    "minimum-stability": "dev"
+    "classmap": [
+      "src/Hopkins/Generators/Generators"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev",
+      "dev-develop": "1.1-dev"
+    }
+  },
+  "minimum-stability": "dev"
 }
